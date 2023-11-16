@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <header>PLAZA DE LA SALUD</header>
+
+        <div class="progress-bar">
+
+            <div class="paso">
+                <p>Datos</p>
+                <div class="num">
+                    <span>1</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            
+           
+
+            <div class="paso">
+                <p>Familiares</p>
+                <div class="num">
+                    <span>2</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+           
+
+            <div class="paso">
+                <p>Condicion</p>
+                <div class="num">
+                    <span>3</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+          
+            
+            <div class="paso">
+                <p>Int</p>
+                <div class="num">
+                    <span>4</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+
+            
+
+
+        </div>
+
+        <div class="form-princ">
+            <form action="#">
+
+                <!--PAGINA 1-->
+                <div class="pagina movPag">
+                    <div class="titulo">Datos Personales</div>
+                    <div class="campo">
+                       <div class="label">Nombres: <b class="error" id="nombres-error"></b></div>  
+                       <input type="text" id="nombres" placeholder="Nombres">   
+                    </div>
+                    <div class="campo">
+                        <div class="label">Apellidos: <b class="error" id="apellido1-error"></b></div>  
+                        <input type="text" id="apellido1" placeholder="Apellidos">   
+                    </div>
+                    <div class="campo">
+                        <div class="label">Cedula: <b class="error" id="apellido2-error"></b></div>  
+                        <input type="text" id="apellido2" placeholder="Cedula">   
+                    </div>
+                    <div class="campo">
+                        <div class="label">Edad: <b class="error" id="apellido2-error"></b></div>  
+                        <input type="text" id="apellido2" placeholder="Edad">   
+                    </div>
+                    <div class="campo sigPag">
+                        <button>Siguiente</button>
+                    </div>
+                </div>
+
+
+                    <!--PAGINA 2-->
+                <div class="pagina">
+                    
+                    <div class="titulo">Familiares</div>
+                    <div class="campo">
+                        <div class="label">Nombre: <b class="error" id="apellido2-error"></b></div>  
+                        <input type="text" id="Nombre" placeholder="Nombre">   
+                    </div>
+                    <div class="campo">
+                        <div class="label">Apellido: <b class="error" id="apellido2-error"></b></div>  
+                        <input type="text" id="apellido2" placeholder="Apellido">   
+                    </div>
+                    <div class="campo">
+                        <div class="label">Fecha de Nacimiento: <b class="error" id="fechaNac-error"></b></div>  
+                        <input type="date" id="fechaNac" max="2010-12-31" value="2023-02-03">   
+                     </div>
+                    <div class="campo">
+                        <div class="label">Sexo: <b class="error" id="sexo-error"></b></div>  
+                        <select id="sexo">
+                            <option value="-1" disable selected>Escoge una opcion</option>
+                            <option value="0">Masculino</option>
+                            <option value="1">Femenino</option>
+                            <option value="2">Sin Especficiar</option>
+                        </select>
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver-pag1 volver">Atras</button>
+                        <button class="adelante-pag3 adelante">Siguiente</button>
+                    </div>
+                </div>
+
+                 <!--PAGINA 3-->
+                <div class="pagina">
+                <div class="titulo">Condiciones Pre-existentes de salud</div>
+                <div class="campo">
+                    <div class="label">Enfermedad: <b class="error" id="apellido2-error"></b></div>  
+                    <input type="text" id="Enfermedad" placeholder="Enfermedad">   
+                </div>
+                <div class="campo">
+                    <div class="label">Tiempo: <b class="error" id="apellido2-error"></b></div>  
+                    <input type="text" id="Tiempo" placeholder="Tiempo">   
+                </div>
+                <div class="campo">
+                    <button class="volver-pag2 volver">Atras</button>
+                    <button class="adelante-pag4 adelante">Siguiente</button>
+                </div>
+                </div>
+
+
+                <!--PAGINA 4-->
+                <div class="pagina">
+                    <div class="titulo">Internamientos</div>
+                    <div class="campo">
+                        <div class="label">Fecha: <b class="error" id="fechaNac-error"></b></div>  
+                        <input type="date" id="fechaNac" max="2010-12-31" value="2023-02-03">   
+                     </div>
+                     <div class="campo">
+                        <div class="label">Centro Medico: <b class="error" id="apellido2-error"></b></div>  
+                        <input type="text" id="Centro Medico" placeholder="Centro Medico">   
+                    </div>
+                    <div class="campo">
+                        <div class="label">Diagnostico: <b class="error" id="apellido2-error"></b></div>  
+                        <input type="text" id="Diagnostico" placeholder="Diagnostico">   
+                    </div>                    
+                    <div class="campo btns">
+                        <button class="volver-pag3 volver">Atras</button>
+                        <button class="Fin">Finalizar</button>
+                    </div>
+                </div>
+                  
+
+            </form>
+        </div>
+    </div>
+   
+
+    <script src="script.js"></script>
+
+    <script>
+        function mostrarContra(){
+            var x= document.getElementById("contra");
+            var y= document.getElementById("ocultar");
+            var z= document.getElementById("mostrar");
+            
+            if(x.type== 'password'){
+                x.type="text";
+                y.style.display="block";
+                z.style.display="none";
+
+            }else{
+                x.type="password";
+                y.style.display="none";
+                z.style.display="block"; 
+
+            }
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
